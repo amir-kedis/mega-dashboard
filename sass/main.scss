@@ -35,3 +35,24 @@ li {
 
   --search-box: rgba(143, 161, 171, 0.64);
 }
+
+/* layout */
+.dashboard {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.header {
+    background-color: aqua;
+}
+.sidebar {
+    background-color: salmon;
+    grid-row: 1 / 3;
+}
+.main {
+    background-color: goldenrod;
+}
+
+/* sidebar */
