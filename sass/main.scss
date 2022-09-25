@@ -38,21 +38,36 @@ li {
 
 /* layout */
 .dashboard {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
 }
 
 .header {
-    background-color: aqua;
+  background-color: aqua;
 }
 .sidebar {
-    background-color: salmon;
-    grid-row: 1 / 3;
+  background-color: salmon;
+  grid-row: 1 / 3;
 }
 .main {
-    background-color: goldenrod;
+  background-color: goldenrod;
 }
 
 /* sidebar */
+.sidebar {
+  background-image: linear-gradient(
+    30deg,
+    var(--gradient-1),
+    var(--gradient-2)
+  );
+
+  .pattern {
+    height: 100%;
+    background-image: url(../assets/img/bg-pattern-opac.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    mix-blend-mode: multiply;
+  }
+}
