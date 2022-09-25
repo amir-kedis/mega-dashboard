@@ -1,12 +1,37 @@
-@forward './norm';
+@forward "./norm";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;600;700;800&display=swap");
+body {
+  font-family: "Lobster", cursive;
+  font-family: "Poppins", sans-serif;
+}
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-h1,h2,h3,h4,h5,h6,p,a,ul,li {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* colors */
+:root {
+  --gradient-1: #fd746c;
+  --gradient-2: #ff9068;
+
+  --btn: #fe7269;
+  --bgc: #ffe5e5;
+
+  --search-box: rgba(143, 161, 171, 0.64);
 }
