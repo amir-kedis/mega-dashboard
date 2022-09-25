@@ -1,9 +1,11 @@
 @forward "./norm";
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;600;700;800&display=swap");
+
 body {
   font-family: "Lobster", cursive;
   font-family: "Poppins", sans-serif;
 }
+
 *,
 *::before,
 *::after {
@@ -11,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 h1,
 h2,
 h3,
@@ -40,7 +43,7 @@ li {
 .dashboard {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 4fr;
 }
 
@@ -55,6 +58,19 @@ li {
   background-color: goldenrod;
 }
 
+.icon {
+  display: inline-block;
+  height: 30px;
+}
+
+.icon-white {
+  fill: #fff;
+}
+
+.icon-black {
+  fill: #000;
+}
+
 /* sidebar */
 .sidebar {
   background-image: linear-gradient(
@@ -62,12 +78,45 @@ li {
     var(--gradient-1),
     var(--gradient-2)
   );
+  position: relative;
 
-  .pattern {
+  &::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     background-image: url(../assets/img/bg-pattern-opac.jpg);
     background-repeat: repeat;
     background-size: cover;
     mix-blend-mode: multiply;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    min-height: 100%;
+    padding: 20px;
+  }
+
+  &__grid {
+    min-height: calc(100vh - 40px);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+  }
+
+  &__title {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: #fff;
+    font-family: "Lobster", cursive;
+    font-size: 15px;
   }
 }
