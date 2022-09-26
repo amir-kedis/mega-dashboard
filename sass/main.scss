@@ -262,3 +262,116 @@ img {
     cursor: pointer;
   }
 }
+.main {
+  &__grid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "projects date date"
+      "projects announcements trending";
+    gap: 40px;
+  }
+  .icon {
+    cursor: pointer;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  .projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    &__project {
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      border-left: 5px solid var(--btn);
+      gap: 10px;
+
+      display: grid;
+    }
+    &__controls {
+      justify-self: end;
+    }
+  }
+  .date {
+    grid-area: date;
+    display: grid;
+    &__box {
+      padding: 20px;
+      background-color: #fff;
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+      border-radius: 7px;
+    }
+  }
+  .announcements {
+    grid-area: announcements;
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    &__box {
+      background-color: #fff;
+      padding: 20px;
+      display: grid;
+      border-radius: 7px;
+      gap: 20px;
+
+      h3 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+    }
+
+    .announcements_announcement ~ .announcements_announcement {
+      border-top: 1px solid rgb(185, 185, 185);
+    }
+  }
+
+  .trending {
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    &__box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 7px;
+      display: grid;
+      gap: 20px;
+
+      > div {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 10px;
+
+        p:first-child {
+          font-weight: 700;
+        }
+
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.box-shadow {
+  box-shadow: -1px 6px 7px 0 rgb(0 0 0 / 18%);
+}
