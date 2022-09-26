@@ -379,6 +379,17 @@ li {
   fill: #000;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* sidebar */
 .sidebar {
   background-image: linear-gradient(30deg, var(--gradient-1), var(--gradient-2));
@@ -419,4 +430,39 @@ li {
   color: #fff;
   font-family: "Lobster", cursive;
   font-size: 15px;
+}
+.sidebar__nav ul {
+  display: grid;
+  gap: 10px;
+}
+.sidebar__nav a {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+  justify-items: start;
+  color: #fff;
+  font-weight: 600;
+  font-size: 21px;
+}
+.sidebar__controls {
+  display: grid;
+  gap: 20px;
+}
+.sidebar__controls .btn {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 17px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
